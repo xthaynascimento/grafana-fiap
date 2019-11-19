@@ -1,0 +1,14 @@
+version: "3"
+services:
+	grafana:
+	#build: .
+	image: grafana/grafana:5.1.0
+	container_name: grafana
+	environment:
+		- GF_SERVER_ROOT_URL=http://localhost
+		- GF_SECURITY_ADMIN_PASSWORD=123456
+	#volumes:
+	#	- grafana-storage:/var/lib/grafana
+	ports:
+		- 3000:3000
+	user: "104"
